@@ -4,6 +4,8 @@ Blog personal construido con [Astro](https://astro.build), donde documento proye
 
 🔗 **Sitio en vivo:** [chertapro.github.io/a-new-repo](https://chertapro.github.io/a-new-repo/)
 
+![Captura de A New Repo](./docs/image.png)
+
 ## Sobre el proyecto
 
 Este blog nació como un espacio propio para escribir sobre lo que voy aprendiendo: proyectos personales, herramientas de desarrollo, y reflexiones sobre la carrera. El contenido se escribe en Markdown y el sitio se genera de forma estática, sin backend ni base de datos.
