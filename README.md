@@ -1,63 +1,75 @@
-# Astro Starter Kit: Blog
+# A New Repo
 
-```sh
-npm create astro@latest -- --template blog
-```
+Blog personal construido con [Astro](https://astro.build), donde documento proyectos, herramientas que uso y mi camino como estudiante de Ciencias de la Computación.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+🔗 **Sitio en vivo:** [chertapro.github.io/a-new-repo](https://chertapro.github.io/a-new-repo/)
 
-Features:
+## Sobre el proyecto
 
-- ✅ Minimal styling (make it your own!)
-- ✅ 100/100 Lighthouse performance
-- ✅ SEO-friendly with canonical URLs and Open Graph data
-- ✅ Sitemap support
-- ✅ RSS Feed support
-- ✅ Markdown & MDX support
+Este blog nació como un espacio propio para escribir sobre lo que voy aprendiendo: proyectos personales, herramientas de desarrollo, y reflexiones sobre la carrera. El contenido se escribe en Markdown y el sitio se genera de forma estática, sin backend ni base de datos.
 
-## 🚀 Project Structure
+## Stack técnico
 
-Inside of your Astro project, you'll see the following folders and files:
+- **[Astro](https://astro.build)** — generador de sitios estáticos, con contenido en Markdown/MDX
+- **TypeScript** — tipado en componentes y configuración de colecciones de contenido
+- **[Fuse.js](https://www.fusejs.io/)** — búsqueda difusa de posts por título y descripción, corriendo en el cliente
+- **CSS puro con variables** — sin frameworks de estilos; tema claro/oscuro implementado con `data-theme` y `localStorage`
+- **GitHub Actions** — build y deploy automático a GitHub Pages en cada push a `main`
+
+## Funcionalidades
+
+- 📝 Posts en Markdown con frontmatter (título, descripción, fecha)
+- 🔍 Buscador en la home que filtra posts en tiempo real, tolerante a errores de tipeo
+- 🌗 Selector de tema claro/oscuro, con persistencia entre visitas
+- 📄 Página About con mi presentación
+- 📡 Feed RSS generado automáticamente
+- 🗺️ Sitemap generado automáticamente
+- ♿ Atención a accesibilidad básica (`aria-label`, `prefers-reduced-motion`, texto alternativo)
+
+## Estructura del proyecto
 
 ```text
-├── public/
+/
+├── public/                  # Assets estáticos (favicon, etc)
 ├── src/
-│   ├── assets/
-│   ├── components/
-│   ├── content/
-│   ├── layouts/
-│   └── pages/
+│   ├── components/          # Header, Footer, BaseHead, HeaderLink, etc
+│   ├── content/
+│   │   └── blog/            # Posts en formato .md
+│   ├── layouts/              # Layout de posts individuales
+│   ├── pages/
+│   │   ├── index.astro       # Home con buscador
+│   │   ├── about.astro        # Página About
+│   │   └── blog/               # Listado y rutas dinámicas de posts
+│   ├── styles/
+│   │   └── global.css         # Variables de tema y estilos base
+│   └── consts.ts               # Título y descripción del sitio
 ├── astro.config.mjs
-├── README.md
-├── package.json
-└── tsconfig.json
+└── package.json
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Correr el proyecto localmente
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+Requiere [Node.js](https://nodejs.org) 22 o superior.
 
-The `src/content/` directory contains "collections" of related Markdown and MDX documents. Use `getCollection()` to retrieve posts from `src/content/blog/`, and type-check your frontmatter using an optional schema. See [Astro's Content Collections docs](https://docs.astro.build/en/guides/content-collections/) to learn more.
+```bash
+npm install
+npm run dev
+```
 
-Any static assets, like images, can be placed in the `public/` directory.
+El sitio queda disponible en `http://localhost:4321`.
 
-## 🧞 Commands
+| Comando             | Acción                                              |
+| :------------------ | :--------------------------------------------------- |
+| `npm install`        | Instala las dependencias                              |
+| `npm run dev`         | Levanta el servidor de desarrollo local               |
+| `npm run build`       | Genera el sitio estático en `./dist/`                 |
+| `npm run preview`      | Sirve la build de producción localmente para probarla |
 
-All commands are run from the root of the project, from a terminal:
+## Despliegue
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+El sitio se despliega automáticamente a **GitHub Pages** mediante un workflow de GitHub Actions (`.github/workflows/deploy.yml`) que corre en cada push a la rama `main`.
 
-## 👀 Want to learn more?
+## Autor
 
-Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
-
-## Credit
-
-This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
+**Ramón Cherta González**
+[GitHub](https://github.com/ChertaPro)
