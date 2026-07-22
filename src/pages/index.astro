@@ -108,7 +108,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 				margin-bottom: 0.3em;
 			}
 			.tagline {
-				color: rgb(var(--gray));
+				color: rgb(var(--text-secondary));
 				font-size: 1.1em;
 			}
 			.search-wrapper {
@@ -121,12 +121,21 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 				padding: 0.7em 1em;
 				font-size: 1em;
 				border-radius: 8px;
-				border: 1px solid rgb(var(--gray-light));
+				border: 1px solid rgb(var(--border));
+				background: var(--bg-alt);
+				color: rgb(var(--text));
 				box-sizing: border-box;
+			}
+			#search-input::placeholder {
+				color: rgb(var(--text-secondary));
+			}
+			#search-input:focus {
+				outline: none;
+				border-color: var(--accent);
 			}
 			#no-results {
 				text-align: center;
-				color: rgb(var(--gray));
+				color: rgb(var(--text-secondary));
 				margin: 2em 0;
 			}
 			.post-list {
@@ -138,7 +147,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 			.post-item {
 				margin-bottom: 1.5em;
 				padding-bottom: 1.5em;
-				border-bottom: 1px solid rgb(var(--gray-light));
+				border-bottom: 1px solid rgb(var(--border));
 			}
 			.post-item a {
 				text-decoration: none;
@@ -150,13 +159,17 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 				font-size: 1.3em;
 			}
 			.post-date {
-				color: rgb(var(--gray));
+				color: rgb(var(--text-secondary));
 				font-size: 0.9em;
 				margin: 0 0 0.4em;
 			}
 			.post-description {
 				margin: 0;
-				color: rgb(var(--gray-dark));
+				color: rgb(var(--text));
+			}
+			.post-item a:hover .post-title,
+			.post-item a:hover .post-date {
+				color: var(--accent);
 			}
 		</style>
 	</body>
