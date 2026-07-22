@@ -283,4 +283,4 @@ Lo que sigue para este blog es, sobre todo, más contenido: la idea siempre fue 
 
 Si estás pensando en armar algo parecido, mi consejo es simple: arrancá, aunque no tengas todo resuelto de antemano. Yo tampoco lo tenía.
 
-Que la Fuerza (del `git commit`) te acompañe.
+Que la Fuerza (del `git commit`) los acompañe. Nos vemos en el próximo post.
