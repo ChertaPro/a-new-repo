@@ -2,6 +2,7 @@
 title: 'Hola, este es mi blog.'
 description: 'Primera entrada de A New Repo — mi bitácora como estudiante de CS.'
 pubDate: '2026-07-16'
+heroImage: '../../assets/posts/1.png'
 ---
 
 Hace mucho tiempo, en una facultad no tan lejana... empezó todo esto.
