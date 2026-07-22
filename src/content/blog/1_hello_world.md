@@ -1,5 +1,5 @@
 ---
-title: 'Hola, este es mi blog'
+title: 'Hola, este es mi blog.'
 description: 'Primera entrada de A New Repo — mi bitácora como estudiante de CS.'
 pubDate: '2026-07-16'
 ---
