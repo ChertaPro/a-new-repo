@@ -128,9 +128,9 @@ Lo primero es decirle a Astro dónde va a vivir el sitio. En `astro.config.mjs`:
 
 ```js
 export default defineConfig({
-	site: 'https://tu-usuario.github.io',
-	base: '/nombre-del-repo',
-	// ...el resto de tu configuración
+ site: 'https://tu-usuario.github.io',
+ base: '/nombre-del-repo',
+ // ...el resto de tu configuración
 });
 ```
 
@@ -206,9 +206,9 @@ Estas decisiones viven como variables CSS en un solo lugar (`global.css`), y tod
 
 ```css
 :root {
-	--accent: #14213d;
-	--bg: #ffffff;
-	--text: 26, 26, 26;
+ --accent: #14213d;
+ --bg: #ffffff;
+ --text: 26, 26, 26;
 }
 ```
 
@@ -222,12 +222,12 @@ Primero, el CSS define dos sets de variables, uno por tema, seleccionados por un
 
 ```css
 [data-theme='light'] {
-	--accent: #14213d;
-	--bg: #ffffff;
+ --accent: #14213d;
+ --bg: #ffffff;
 }
 [data-theme='dark'] {
-	--accent: #7aa3e0;
-	--bg: #121212;
+ --accent: #7aa3e0;
+ --bg: #121212;
 }
 ```
 
@@ -243,9 +243,9 @@ Y un botón en el header simplemente alterna el atributo y persiste la elección
 
 ```js
 toggleBtn.addEventListener('click', () => {
-	const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-	document.documentElement.setAttribute('data-theme', next);
-	localStorage.setItem('theme', next);
+ const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+ document.documentElement.setAttribute('data-theme', next);
+ localStorage.setItem('theme', next);
 });
 ```
 
@@ -259,13 +259,13 @@ La idea es simple: se le pasa un array con los datos de cada post (título y des
 
 ```js
 const fuse = new Fuse(searchIndex, {
-	keys: ['title', 'description'],
-	threshold: 0.35,
+ keys: ['title', 'description'],
+ threshold: 0.35,
 });
 
 input.addEventListener('input', (e) => {
-	const results = fuse.search(e.target.value);
-	// mostrar u ocultar posts según coincidan o no
+ const results = fuse.search(e.target.value);
+ // mostrar u ocultar posts según coincidan o no
 });
 ```
 
